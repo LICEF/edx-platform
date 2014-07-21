@@ -334,6 +334,13 @@
             </div>
             % endif
 
+            % if settings.REGISTRATION_EXTRA_FIELDS['email_consent'] != 'hidden':
+            <div class="field ${settings.REGISTRATION_EXTRA_FIELDS['email_consent']} checkbox" id="field-email_consent">
+              <input id="emailconsent-yes" type="checkbox" name="email_consent" value="true" />
+              <label for="emailconsent-yes">${"OUI — J’accepte de recevoir, à l'occasion, des courriels de la TÉLUQ!"}</label>
+            </div>
+            % endif
+
             % if settings.REGISTRATION_EXTRA_FIELDS['honor_code'] != 'hidden':
             <div class="field ${settings.REGISTRATION_EXTRA_FIELDS['honor_code']} checkbox" id="field-honorcode">
               <input id="honorcode-yes" type="checkbox" name="honor_code" value="true" />
