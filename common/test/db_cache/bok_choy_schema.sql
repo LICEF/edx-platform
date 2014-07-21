@@ -363,6 +363,7 @@ CREATE TABLE `auth_userprofile` (
   `allow_certificate` tinyint(1) NOT NULL,
   `country` varchar(2),
   `city` longtext,
+  `email_consent` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `user_id` (`user_id`),
   KEY `auth_userprofile_52094d6e` (`name`),
