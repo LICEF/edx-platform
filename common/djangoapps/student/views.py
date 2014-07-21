@@ -1088,6 +1088,10 @@ def _do_create_account(post_vars):
     profile.city = post_vars.get('city')
     profile.country = post_vars.get('country')
     profile.goals = post_vars.get('goals')
+    email_consent = post_vars.get('email_consent')
+    if email_consent is None:
+        email_consent = False
+    profile.email_consent = email_consent
 
     try:
         profile.year_of_birth = int(post_vars['year_of_birth'])
