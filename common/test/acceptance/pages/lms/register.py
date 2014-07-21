@@ -48,6 +48,7 @@ class RegisterPage(PageObject):
         self.q(css='input#name').fill(full_name)
         self.q(css='input#tos-yes').first.click()
         self.q(css='input#honorcode-yes').first.click()
+        self.q(css='input#emailconsent-yes').first.click()
 
     def submit(self):
         """
