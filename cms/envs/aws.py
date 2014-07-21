@@ -285,3 +285,20 @@ X_FRAME_OPTIONS = ENV_TOKENS.get('X_FRAME_OPTIONS', X_FRAME_OPTIONS)
 
 ##### ADVANCED_SECURITY_CONFIG #####
 ADVANCED_SECURITY_CONFIG = ENV_TOKENS.get('ADVANCED_SECURITY_CONFIG', {})
+
+
+"""
+This should overwrites previous settings
+"""
+
+REGISTRATION_EXTRA_FIELDS = {
+    'level_of_education': 'required',
+    'gender': 'optional',
+    'year_of_birth': 'hidden',
+    'mailing_address': 'hidden',
+    'goals': 'required',
+    'honor_code': 'required',
+    'email_consent' : 'optional',
+    'city': 'required',
+    'country': 'required',
+}
