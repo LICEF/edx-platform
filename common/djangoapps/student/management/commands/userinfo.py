@@ -26,7 +26,8 @@ Pass a single filename.'''
                   'joined': user.date_joined.isoformat(),
                   'name': up.name,
                   'language': up.language,
-                  'location': up.location}
+                  'location': up.location,
+                  'email_consent': user.email_consent, }
             l.append(d)
         json.dump(l, f)
         f.close()
