@@ -24,6 +24,7 @@ class TestExtraRegistrationVariables(TestCase):
             'password': 'password',
             'terms_of_service': 'true',
             'honor_code': 'true',
+            'email_consent': 'true',
         }
 
     def test_default_missing_honor(self):
@@ -57,6 +58,7 @@ class TestExtraRegistrationVariables(TestCase):
         'mailing_address': 'hidden',
         'goals': 'hidden',
         'honor_code': 'hidden',
+        'email_consent': 'hidden',
         'city': 'hidden',
         'country': 'hidden'})
     def test_all_hidden(self):
