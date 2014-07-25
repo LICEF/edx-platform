@@ -1206,7 +1206,8 @@ def create_account(request, post_override=None):  # pylint: disable-msg=too-many
                 'mailing_address': _('Your mailing address is required'),
                 'goals': _('A description of your goals is required'),
                 'city': _('A city is required'),
-                'country': _('A country is required')
+                'country': _('A country is required'),
+                'email_consent': _('Your consent to receive email is required')
             }
             js['value'] = error_str[field_name]
             js['field'] = field_name
