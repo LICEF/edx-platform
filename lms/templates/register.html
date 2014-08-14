@@ -328,7 +328,7 @@
             % if has_extauth_info is UNDEFINED or ask_for_tos :
             <div class="field required checkbox" id="field-tos">
               <input id="tos-yes" type="checkbox" name="terms_of_service" value="true" required aria-required="true" />
-              <label for="tos-yes">${_('I agree to the {link_start}Terms of Service{link_end}').format(
+              <label for="tos-yes">${"J'accepte les {link_start}Conditions d'utilisation {link_end}'.format(
                 link_start='<a href="{url}" class="new-vp" tabindex="-1">'.format(url=marketing_link('TOS')),
                 link_end='</a>')}</label>
             </div>
@@ -344,7 +344,7 @@
                 else:
                   honor_code_path = marketing_link('HONOR')
               %>
-              <label for="honorcode-yes">${"J'ai lu et je m'engage à respecter le " {link_start}"Code d'honneur"{link_end}).format(
+              <label for="honorcode-yes">${" J'ai lu et je m'engage à respecter le {link_start}Code d'honneur{link_end}.format(
                 link_start='<a href="{url}" class="new-vp" tabindex="-1">'.format(url=honor_code_path),
                 link_end='</a>')}</label>
             </div>
@@ -353,7 +353,7 @@
             % if settings.REGISTRATION_EXTRA_FIELDS['email_consent'] != 'hidden':
             <div class="field ${settings.REGISTRATION_EXTRA_FIELDS['email_consent']} checkbox" id="field-email_consent">
               <input id="emailconsent-yes" type="checkbox" name="email_consent" value="true" />
-              <label for="emailconsent-yes">${"OUI — J’accepte de recevoir, à l'occasion, des courriels de la TÉLUQ!"}</label>
+              <label for="emailconsent-yes">${"OUI — J’accepte de recevoir, à l'occasion, des courriels de la TÉLUQ"}</label>
             </div>
             % endif
 
