@@ -249,7 +249,7 @@
 
                 # Translators: This text will be automatically posted to the student's
                 # Twitter account. {url} should appear at the end of the text.
-                tweet_text = "Je viens de m'inscrire au cours {title} offert à la Téluq:: {url}".format(
+                tweet_text = u"Je viens de m'inscrire au cours {title} offert à la Téluq:: {url}".format(
                     number=course.number,
                     title=get_course_about_section(course, 'title'),
                     account=microsite.get_value('course_about_twitter_account', settings.PLATFORM_TWITTER_ACCOUNT),
@@ -264,7 +264,7 @@
 
                 email_subject = u"mailto:?subject={subject}&body={body}".format(
                     subject=_("Take a course with {platform} online").format(platform=platform_name),
-                    body="Je viens de m'inscrire au cours {title} offert à la Téluq:: {url}".format(
+                    body=u"Je viens de m'inscrire au cours {title} offert à la Téluq:: {url}".format(
                         number=course.number,
                         title=get_course_about_section(course, 'title'),
                         platform=platform_name,
