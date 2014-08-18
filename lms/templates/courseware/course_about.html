@@ -249,7 +249,7 @@
 
                 # Translators: This text will be automatically posted to the student's
                 # Twitter account. {url} should appear at the end of the text.
-                tweet_text = _("I just registered for {number} {title} through {account}: {url}").format(
+                tweet_text = "Je viens de m'inscrire au cours {title} offert à la Téluq:: {url}".format(
                     number=course.number,
                     title=get_course_about_section(course, 'title'),
                     account=microsite.get_value('course_about_twitter_account', settings.PLATFORM_TWITTER_ACCOUNT),
@@ -264,7 +264,7 @@
 
                 email_subject = u"mailto:?subject={subject}&body={body}".format(
                     subject=_("Take a course with {platform} online").format(platform=platform_name),
-                    body=_("I just registered for {number} {title} through {platform} {url}").format(
+                    body="Je viens de m'inscrire au cours {title} offert à la Téluq:: {url}".format(
                         number=course.number,
                         title=get_course_about_section(course, 'title'),
                         platform=platform_name,
@@ -276,13 +276,13 @@
                 ).replace(u" ", u"%20")
               %>
               <a href="${tweet_action}" class="share">
-                <img src="${static.url('images/social/twitter-sharing.png')}" alt="Tweet that you've registered for this course">
+                <img src="${static.url('images/social/twitter-sharing.png')}" alt="Tweeter un message annonçant votre inscription à ce cours">
               </a>
               <a href="${facebook_link}" class="share">
-                <img src="${static.url('images/social/facebook-sharing.png')}" alt="Post a Facebook message to say you've registered for this course">
+                <img src="${static.url('images/social/facebook-sharing.png')}" alt="Poster un message Facebook annonçant votre inscription à ce cours">
               </a>
               <a href="${email_subject}" class="share">
-                <img src="${static.url('images/social/email-sharing.png')}" alt="Email someone to say you've registered for this course">
+                <img src="${static.url('images/social/email-sharing.png')}" alt="Envoyer un courriel annonçant votre inscription à ce cours">
               </a>
             % endif
           </div>
@@ -292,7 +292,7 @@
         <ol class="important-dates">
           ## <li><div class="icon course-number"></div><p>${_("Course Number")}</p><span class="course-number">${course.display_number_with_default | h}</span></li>
           % if not course.start_date_is_still_default:
-          <li><div class="icon start"></div><p>${_("Classes Start")}</p><span class="start-date">${course.start_date_text}</span></li>
+          <li><div class="icon start"></div><p>${_("Classes Start")}</p><span class="start-date">"octobre 2014"</span></li>
           % endif
             ## We plan to ditch end_date (which is not stored in course metadata),
             ## but for backwards compatibility, show about/end_date blob if it exists.
