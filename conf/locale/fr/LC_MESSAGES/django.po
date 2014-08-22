@@ -246,7 +246,7 @@ msgstr "Doctorat"
 
 #: common/djangoapps/student/models.py
 msgid "Master's or professional degree"
-msgstr "Master ou diplôme professionnel"
+msgstr "Maitrise ou diplôme professionnel"
 
 #: common/djangoapps/student/models.py
 msgid "Bachelor's degree"
