@@ -226,15 +226,16 @@ class UserProfile(models.Model):
     # ('p_se', 'Doctorate in science or engineering'),
     # ('p_oth', 'Doctorate in another field'),
     LEVEL_OF_EDUCATION_CHOICES = (
-        ('p', u"Doctorat / PH.D. / 3e cycle univ. "),
-        ('m', u"Maîtrise / Mastère / 2e cycle univ. "),
-        ('b', u"Baccalauréat / 1er cycle univ. "),
-        ('a', u"Cégep (QC)"),
-        ('hs', ugettext_noop("Secondary/high school")),
-        ('jhs', u"Collège (FR)"),
+        ('p', u"Université 3e cycle - Doctorat / Ph.D."),
+        ('m', u"Université 2e cycle - Maîtrise / Master / Diplôme d'ingénieur / DESS"),
+        ('b', u"Université 1er cycle - Baccalauréat (Qc) - Licence (Fr)"),
+        ('ct', u"DEC professionnel (Qc) - DUT (Fr) / BTS (Fr)"),
+        ('c', u"Diplôme d'études collégiales (Qc) / DEC général (Qc)"),
+        ('hs', u"Enseignemment secondaire - Bac (Fr) / Lycée"),
         ('el', ugettext_noop("Elementary/primary school")),
         # Translators: 'None' refers to the student's level of education
         # Translators: 'Other' refers to the student's level of education
+        ('none', ugettext_noop("None"),
         ('other', ugettext_noop("Other"))
     )
     level_of_education = models.CharField(
