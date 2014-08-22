@@ -1,9 +1,9 @@
 <%namespace file="../main.html" import="stanford_theme_enabled" />
 <%! from django.utils.translation import ugettext as _ %>
 
-${u"Merci pour votre inscription à {platform_name}! Pour activer "
+${_(u"Merci pour votre inscription à {platform_name}! Pour activer "
 u"votre compte, veuillez copier-coller cette adresse dans la barre "
-u"d'adresse de votre fureteur:".format(platform_name=settings.PLATFORM_NAME)}
+u"d'adresse de votre fureteur:").format(platform_name=settings.PLATFORM_NAME)}
 
 % if is_secure:
   https://${ site }/activate/${ key }
@@ -13,13 +13,13 @@ u"d'adresse de votre fureteur:".format(platform_name=settings.PLATFORM_NAME)}
 
 ## Temporary hack until we develop a better way to adjust language
 % if stanford_theme_enabled():
- ${u"Si vous n'avez pas demandé ceci, ne faites rien; Vous ne recevrez pas "
-     u"d'autre courriel de notre part. Merci de ne pas répondre à ce courriel;"
-     u"  Si vous cherchez de l'aide, consultez la section FAQ de notre site ( "
-     u"{platform_name}).".format(platform_name=settings.PLATFORM_NAME)}
+ ${_(u"Si vous n'avez pas demandé ceci, ne faites rien; Vous ne recevrez pas "
+        u"d'autre courriel de notre part. Merci de ne pas répondre à ce courriel;"
+        u"  Si vous cherchez de l'aide, consultez la section FAQ de notre site ( "
+        u"{platform_name}).").format(platform_name=settings.PLATFORM_NAME)}
 % else:
-    ${u"Si vous n'avez pas demandé ceci, ne faites rien; Vous ne recevrez pas "
+    ${_(u"Si vous n'avez pas demandé ceci, ne faites rien; Vous ne recevrez pas "
         u"d'autre courriel de notre part. Merci de ne pas répondre à ce courriel;"
         u" Si vous cherchez de l'aide, consultez la section FAQ de notre site ("
-        u"{platform_name}).".format(platform_name=settings.PLATFORM_NAME)}
+        u"{platform_name}).").format(platform_name=settings.PLATFORM_NAME)}
 % endif
