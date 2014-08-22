@@ -312,7 +312,7 @@
 
           % if settings.REGISTRATION_EXTRA_FIELDS['goals'] != 'hidden':
           <li class="field ${settings.REGISTRATION_EXTRA_FIELDS['goals']} text" id="field-goals">
-            <label for="goals">${_("Please share with us your reasons for registering with {platform_name}").format(platform_name=platform_name)}</label>
+            <label for="goals">${u"Merci de nous préciser comment vous avez entendu parler de {platform_name}? (site web, journal, média, réseau social, …) Lequel?".format(platform_name=platform_name)}</label>
             <textarea id="goals" name="goals" value="" ${'required aria-required="true"' if settings.REGISTRATION_EXTRA_FIELDS['goals'] == 'required' else ''}></textarea>
           </li>
           % endif
