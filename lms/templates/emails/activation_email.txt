@@ -1,9 +1,9 @@
 <%namespace file="../main.html" import="stanford_theme_enabled" />
 <%! from django.utils.translation import ugettext as _ %>
 
-${_("Thank you for signing up for {platform_name}! To activate "
-"your account, please copy and paste this address into your web "
-"browser's address bar:").format(platform_name=settings.PLATFORM_NAME)}
+${u"Merci pour votre inscription à {platform_name}! Pour activer "
+u"votre compte, veuillez copier-coller cette adresse dans la barre "
+u"d'adresse de votre fureteur:".format(platform_name=settings.PLATFORM_NAME)}
 
 % if is_secure:
   https://${ site }/activate/${ key }
@@ -13,13 +13,13 @@ ${_("Thank you for signing up for {platform_name}! To activate "
 
 ## Temporary hack until we develop a better way to adjust language
 % if stanford_theme_enabled():
-  ${_("If you didn't request this, you don't need to do anything; you won't "
-      "receive any more email from us. Please do not reply to this e-mail; "
-      "if you require assistance, check the about section of the "
-      "{platform_name} Courses web site.").format(platform_name=settings.PLATFORM_NAME)}
+ ${u"Si vous n'avez pas demandé ceci, ne faites rien; Vous ne recevrez pas "
+     u"d'autre courriel de notre part. Merci de ne pas répondre à ce courriel;"
+     u"  Si vous cherchez de l'aide, consultez la section FAQ de notre site ( "
+     u"{platform_name}).".format(platform_name=settings.PLATFORM_NAME)}
 % else:
-  ${_("If you didn't request this, you don't need to do anything; you won't "
-      "receive any more email from us. Please do not reply to this e-mail; "
-      "if you require assistance, check the help section of the "
-      "{platform_name} web site.").format(platform_name=settings.PLATFORM_NAME)}
+    ${u"Si vous n'avez pas demandé ceci, ne faites rien; Vous ne recevrez pas "
+        u"d'autre courriel de notre part. Merci de ne pas répondre à ce courriel;"
+        u" Si vous cherchez de l'aide, consultez la section FAQ de notre site ("
+        u"{platform_name}).".format(platform_name=settings.PLATFORM_NAME)}
 % endif
