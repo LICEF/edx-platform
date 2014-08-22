@@ -1,3 +1,4 @@
+## -*- coding: utf-8 -*-
 """
 Models for User Information (students, staff, etc)
 
@@ -10,6 +11,7 @@ file and check it in at the same time as your model changes. To do that,
 2. ./manage.py lms schemamigration student --auto description_of_your_change
 3. Add the migration file created in edx-platform/common/djangoapps/student/migrations/
 """
+
 from datetime import datetime, timedelta
 import hashlib
 import json
