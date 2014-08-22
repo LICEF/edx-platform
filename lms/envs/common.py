@@ -597,7 +597,7 @@ FAVICON_PATH = 'images/favicon.ico'
 
 # Locale/Internationalization
 TIME_ZONE = 'America/Montreal'  # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
-LANGUAGE_CODE = 'fr_ca'  # http://www.i18nguy.com/unicode/language-identifiers.html
+LANGUAGE_CODE = 'fr'  # http://www.i18nguy.com/unicode/language-identifiers.html
 
 # Sourced from http://www.localeplanet.com/icu/ and wikipedia
 LANGUAGES = (
@@ -634,7 +634,6 @@ LANGUAGES = (
     ('fi-fi', u'Suomi (Suomi)'),  # Finnish (Finland)
     ('fil', u'Filipino'),  # Filipino
     ('fr', u'Français'),  # French
-    ('fr-ca', u'Français Canada'),  # French Canada
     ('gl', u'Galego'),  # Galician
     ('gu', u'ગુજરાતી'),  # Gujarati
     ('he', u'עברית'),  # Hebrew
