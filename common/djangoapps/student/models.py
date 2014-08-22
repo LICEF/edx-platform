@@ -230,8 +230,8 @@ class UserProfile(models.Model):
         ('m', u"Université 2e cycle - Maîtrise / Master / Diplôme d'ingénieur / DESS"),
         ('b', u"Université 1er cycle - Baccalauréat (Qc) - Licence (Fr)"),
         ('p_se', u"DEC professionnel (Qc) / DUT (Fr) / BTS (Fr)"),
-        ('jhs', u"Diplôme d'études collégiales (Qc) / DEC général (Qc)"),
-        ('hs', u"Enseignemment secondaire - Bac (Fr) / Lycée"),
+        ('jhs', u"Diplôme d'études collégiales / DEC général (Qc)"),
+        ('hs', u"Enseignement secondaire - Bac (Fr) / Lycée"),
         ('el', ugettext_noop("Elementary/primary school")),
         # Translators: 'None' refers to the student's level of education
         # Translators: 'Other' refers to the student's level of education
