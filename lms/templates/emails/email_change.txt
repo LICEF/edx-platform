@@ -1,9 +1,9 @@
 <%! from django.utils.translation import ugettext as _ %>
 <%namespace file="../main.html" import="stanford_theme_enabled" />
-${_("We received a request to change the e-mail associated with your "
-    "{platform_name} account from {old_email} to {new_email}. "
-    "If this is correct, please confirm your new e-mail address by "
-    "visiting:").format(platform_name=settings.PLATFORM_NAME, old_email=old_email, new_email=new_email)}
+${u"Nous avons reçu une demande pour changer l'adresse de courriel associée à votre compte "
+u"{platform_name} de {old_email} à {new_email}. "
+u"Si cela est correct, confirmer votre demande de changement de courriel en "
+u"visitant:".format(platform_name=settings.PLATFORM_NAME, old_email=old_email, new_email=new_email)}
 
 % if is_secure:
  https://${ site }/email_confirm/${ key }
@@ -13,13 +13,14 @@ ${_("We received a request to change the e-mail associated with your "
 
 ## TODO: fix this ugly hack
 % if stanford_theme_enabled():
-  ${_("If you didn't request this, you don't need to do anything; you won't "
-      "receive any more email from us. Please do not reply to this e-mail; "
-      "if you require assistance, check the about section of the "
-      "{platform_name} Courses web site.").format(platform_name=settings.PLATFORM_NAME)}
+    ${u"Si vous n'avez pas demandé ce changement, vous pouvez ignorer ce courriel; "
+        u"Nous ne vous enverrons pas d'autres messages. Par ailleurs, veuillez ne pas répondre à ce courriel; "
+        u"Si vous avez besoin d'aide, consultez la rubrique FAQ de {platform_name}.".format(platform_name=settings.PLATFORM_NAME)}
 % else:
-  ${_("If you didn't request this, you don't need to do anything; you won't "
-      "receive any more email from us. Please do not reply to this e-mail; "
-      "if you require assistance, check the help section of the "
-      "{platform_name} web site.").format(platform_name=settings.PLATFORM_NAME)}
+    ${u"Si vous n'avez pas demandé ce changement, vous pouvez ignorer ce courriel; "
+        u"Nous ne vous enverrons pas d'autres messages. Par ailleurs, veuillez ne pas répondre à ce courriel; "
+        u"Si vous avez besoin d'aide, consultez la rubrique FAQ de {platform_name}.".format(platform_name=settings.PLATFORM_NAME)}
 % endif
+
+${u"L'équipe Ulibre"}
+
