@@ -1194,7 +1194,7 @@ def create_account(request, post_override=None):  # pylint: disable-msg=too-many
 
         if len(post_vars[field_name]) < min_length:
             error_str = {
-                'username': _('Username must be minimum of two characters long'),
+                'username': u"Le nom d'utilisateur doit contenir au moins deux caractères",
                 'email': _('A properly formatted e-mail is required'),
                 'name': _('Your legal name must be a minimum of two characters long'),
                 'password': _('A valid password is required'),
