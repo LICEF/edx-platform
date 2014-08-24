@@ -1325,7 +1325,7 @@ MKTG_URL_LINK_MAP = {
     'APROPOS': 'about_edx',
     'CONTACT': 'contact',
     'FAQ': 'help_edx',
-    'COURS': 'courses',
+    'COURS': 'cours',
     'ROOT': 'root',
     'TOS': 'tos',
     'HONOR': 'honor',
