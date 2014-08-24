@@ -1322,7 +1322,7 @@ INSTALLED_APPS = (
 EDXMKTG_COOKIE_NAME = 'edxloggedin'
 MKTG_URLS = {}
 MKTG_URL_LINK_MAP = {
-    'ABOUT': 'about_edx',
+    'APROPOS': 'about_edx',
     'CONTACT': 'contact',
     'FAQ': 'help_edx',
     'COURSES': 'courses',
