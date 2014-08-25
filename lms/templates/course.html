@@ -25,7 +25,7 @@ from courseware.courses import course_image_url, get_course_about_section
           <p>${get_course_about_section(course, 'short_description')}</p>
         </div>
         <div class="bottom">
-          <span class="university">${get_course_about_section(course, 'university')}</span>
+          <span class="university">${u"TÉLUQ"}</span>
           % if not course.start_date_is_still_default:
           <span class="start-date">${u"octobre 2014"}</span>
           % endif
@@ -33,7 +33,7 @@ from courseware.courses import course_image_url, get_course_about_section
       </section>
     </div>
     <div class="meta-info">
-      <p class="university">${get_course_about_section(course, 'university')}</p>
+      <p class="university">${u"TÉLUQ"}</p>
     </div>
   </a>
 </article>
