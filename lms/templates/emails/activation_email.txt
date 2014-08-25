@@ -1,3 +1,5 @@
+# -*- coding: utf-8
+
 <%namespace file="../main.html" import="stanford_theme_enabled" />
 <%! from django.utils.translation import ugettext as _ %>
 
@@ -13,13 +15,13 @@ u"fureteur l'adresse qui suit:".format(platform_name=settings.PLATFORM_NAME)}
 
 ## Temporary hack until we develop a better way to adjust language
 % if stanford_theme_enabled():
-    ${u"Si vous n'avez pas demandé de vous inscrire à {platform_name}, vous pouvez ignorer ce courriel; "
-        u"Nous ne vous enverrons pas d'autres messages. Par ailleurs, veuillez ne pas répondre à ce courriel; "
-        u"Si vous avez besoin d'aide, consultez la rubrique FAQ de {platform_name}.".format(platform_name=settings.PLATFORM_NAME)}
+	${u"Si vous n'avez pas demandé de vous inscrire à {platform_name}, vous pouvez ignorer ce courriel; "
+	u"Nous ne vous enverrons pas d'autres messages. Par ailleurs, veuillez ne pas répondre à ce courriel; "
+	u"Si vous avez besoin d'aide, consultez la rubrique FAQ de {platform_name}.".format(platform_name=settings.PLATFORM_NAME)}
 % else:
-    ${u"Si vous n'avez pas demandé de vous inscrire à {platform_name}, vous pouvez ignorer ce courriel; "
-        u"Nous ne vous enverrons pas d'autres messages. Par ailleurs, veuillez ne pas répondre à ce courriel; "
-        u"Si vous avez besoin d'aide, consultez la rubrique FAQ de {platform_name}.".format(platform_name=settings.PLATFORM_NAME)}
+	${u"Si vous n'avez pas demandé de vous inscrire à {platform_name}, vous pouvez ignorer ce courriel; "
+	u"Nous ne vous enverrons pas d'autres messages. Par ailleurs, veuillez ne pas répondre à ce courriel; "
+	u"Si vous avez besoin d'aide, consultez la rubrique FAQ de {platform_name}.".format(platform_name=settings.PLATFORM_NAME)}
 % endif
 
 ${u"L'équipe Ulibre"}
