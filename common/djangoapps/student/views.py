@@ -1195,18 +1195,18 @@ def create_account(request, post_override=None):  # pylint: disable-msg=too-many
         if len(post_vars[field_name]) < min_length:
             error_str = {
                 'username': u"Le nom d'utilisateur doit contenir au moins deux caractères",
-                'email': _('A properly formatted e-mail is required'),
-                'name': _('Your legal name must be a minimum of two characters long'),
-                'password': _('A valid password is required'),
+                'email': u"Une adresse courriel valide est requise.",
+                'name': u"Votre nom complet doit contenir au minimum deux caractères.",
+                'password': u"Une adresse courriel valide est requise.",
                 'terms_of_service': _('Accepting Terms of Service is required'),
                 'honor_code': _('Agreeing to the Honor Code is required'),
-                'level_of_education': _('A level of education is required'),
+                'level_of_education': u"Un niveau d'études est requis.",
                 'gender': _('Your gender is required'),
                 'year_of_birth': _('Your year of birth is required'),
                 'mailing_address': _('Your mailing address is required'),
                 'goals': u"Vous devez indiquer comment vous avez entendu parler d’Ulibre.",
-                'city': _('A city is required'),
-                'country': _('A country is required'),
+                'city': u"Une ville est requise.",
+                'country': u"Un pays est requis.",
                 'email_consent': _('Your consent to receive email is required')
             }
             js['value'] = error_str[field_name]
