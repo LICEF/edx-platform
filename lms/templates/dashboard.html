@@ -382,7 +382,7 @@
 
     <header>
       <h2 id="password-reset-email">
-        ${_('Password Reset Email Sent')}
+        ${"COURRIEL DE RÉINITIALISATION DE MOT DE PASSE ENVOYÉ"}
         <span class="sr">,
           ## Translators: this text gives status on if the modal interface (a menu or piece of UI that takes the full focus of the screen) is open or not
           ${_("window open")}
@@ -393,7 +393,7 @@
     <div>
       <form> <!-- Here for styling reasons -->
         <section>
-          <p>${_('An email has been sent to {email}. Follow the link in the email to change your password.').format(email=user.email)}</p>
+          <p>${u"Un courriel a été envoyé à {email}. Suivez le lien dans le courriel pour changer votre mot de passe.".format(email=user.email)}</p>
         </section>
       </form>
     </div>
