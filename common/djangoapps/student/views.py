@@ -1154,7 +1154,7 @@ def create_account(request, post_override=None):  # pylint: disable-msg=too-many
 
     if extra_fields.get('honor_code', 'required') == 'required' and \
             post_vars.get('honor_code', 'false') != u'true':
-        js['value'] = _("To enroll, you must follow the honor code.").format(field=a)
+        js['value'] = u"Pour vous inscrire, vous devez vous engager à respecter la Charte des utilisateurs.".format(field=a)
         js['field'] = 'honor_code'
         return JsonResponse(js, status=400)
 
@@ -1170,7 +1170,7 @@ def create_account(request, post_override=None):  # pylint: disable-msg=too-many
 
     if tos_required:
         if post_vars.get('terms_of_service', 'false') != u'true':
-            js['value'] = _("You must accept the terms of service.").format(field=a)
+            js['value'] = u"Pour vous inscrire, vous devez accepter les Conditions générales d'utilisation.".format(field=a)
             js['field'] = 'terms_of_service'
             return JsonResponse(js, status=400)
 
@@ -1204,7 +1204,7 @@ def create_account(request, post_override=None):  # pylint: disable-msg=too-many
                 'gender': _('Your gender is required'),
                 'year_of_birth': _('Your year of birth is required'),
                 'mailing_address': _('Your mailing address is required'),
-                'goals': _('A description of your goals is required'),
+                'goals': u"Vous devez indiquer comment vous avez entendu parler d’Ulibre.",
                 'city': _('A city is required'),
                 'country': _('A country is required'),
                 'email_consent': _('Your consent to receive email is required')

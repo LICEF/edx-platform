@@ -1,3 +1,4 @@
+
 <%! from django.utils.translation import ugettext as _ %>
 <%! from microsite_configuration import microsite %>
 
@@ -225,7 +226,7 @@
           <li class="field required text" id="field-name">
             <label for="name">${_('Full Name')}</label>
             <input id="name" type="text" name="name" value="" placeholder="$_('example: Jane Doe')}" aria-describedby="name-tip" />
-            <span class="tip tip-input" id="name-tip">${_("Needed for any certificates you may earn")}</span>
+            <span class="tip tip-input" id="name-tip">${u"Ce renseignement est nécessaire pour l’obtention des certificats (attestations de participation)."}</span>
           </li>
 
           % endif
