@@ -1154,7 +1154,7 @@ def create_account(request, post_override=None):  # pylint: disable-msg=too-many
 
     if extra_fields.get('honor_code', 'required') == 'required' and \
             post_vars.get('honor_code', 'false') != u'true':
-        js['value'] = _("To enroll, you must follow the honor code.").format(field=a)
+        js['value'] = u"Pour vous inscrire, vous devez vous engager à respecter la Charte des utilisateurs.".format(field=a)
         js['field'] = 'honor_code'
         return JsonResponse(js, status=400)
 
@@ -1170,7 +1170,7 @@ def create_account(request, post_override=None):  # pylint: disable-msg=too-many
 
     if tos_required:
         if post_vars.get('terms_of_service', 'false') != u'true':
-            js['value'] = _("You must accept the terms of service.").format(field=a)
+            js['value'] = u"Pour vous inscrire, vous devez accepter les Conditions générales d'utilisation.".format(field=a)
             js['field'] = 'terms_of_service'
             return JsonResponse(js, status=400)
 
@@ -1194,19 +1194,19 @@ def create_account(request, post_override=None):  # pylint: disable-msg=too-many
 
         if len(post_vars[field_name]) < min_length:
             error_str = {
-                'username': _('Username must be minimum of two characters long'),
-                'email': _('A properly formatted e-mail is required'),
-                'name': _('Your legal name must be a minimum of two characters long'),
-                'password': _('A valid password is required'),
+                'username': u"Le nom d'utilisateur doit contenir au moins deux caractères",
+                'email': u"Une adresse courriel valide est requise.",
+                'name': u"Votre nom complet doit contenir au minimum deux caractères.",
+                'password': u"Une adresse courriel valide est requise.",
                 'terms_of_service': _('Accepting Terms of Service is required'),
                 'honor_code': _('Agreeing to the Honor Code is required'),
-                'level_of_education': _('A level of education is required'),
+                'level_of_education': u"Un niveau d'études est requis.",
                 'gender': _('Your gender is required'),
                 'year_of_birth': _('Your year of birth is required'),
                 'mailing_address': _('Your mailing address is required'),
-                'goals': _('A description of your goals is required'),
-                'city': _('A city is required'),
-                'country': _('A country is required'),
+                'goals': u"Vous devez indiquer comment vous avez entendu parler d’Ulibre.",
+                'city': u"Une ville est requise.",
+                'country': u"Un pays est requis.",
                 'email_consent': _('Your consent to receive email is required')
             }
             js['value'] = error_str[field_name]

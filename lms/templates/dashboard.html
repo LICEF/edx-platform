@@ -109,7 +109,7 @@
                {"new_email" : new_email, "password" : new_password},
                function(data) {
                  if (data.success) {
-                   $("#change_email_title").html("${_('Please verify your new email')}");
+                   $("#change_email_title").html("${u"Veillez vérifier votre nouvelle adsresse de courriel"}");
                    $("#change_email_form").html("<p>${_('You\'ll receive a confirmation in your inbox.'
                                                     ' Please click the link in the email to confirm'
                                                     ' the email change.')}</p>");
@@ -212,7 +212,7 @@
           <span class="title"><div class="icon name-icon"></div>${_("Full Name")} (<a href="#apply_name_change" rel="leanModal" class="edit-name">${_("edit")}</a>)</span> <span class="data">${ user.profile.name | h }</span>
         </li>
         <li class="info--email">
-          <span class="title"><div class="icon email-icon"></div>${_("Email")}
+          <span class="title"><div class="icon email-icon"></div>${u"Adresse courriel"}
             % if external_auth_map is None or 'shib' not in external_auth_map.external_domain:
             (<a href="#change_email" rel="leanModal" class="edit-email">${_("edit")}</a>)
             % endif
@@ -382,7 +382,7 @@
 
     <header>
       <h2 id="password-reset-email">
-        ${_('Password Reset Email Sent')}
+        ${"COURRIEL DE RÉINITIALISATION DE MOT DE PASSE ENVOYÉ"}
         <span class="sr">,
           ## Translators: this text gives status on if the modal interface (a menu or piece of UI that takes the full focus of the screen) is open or not
           ${_("window open")}
@@ -393,7 +393,7 @@
     <div>
       <form> <!-- Here for styling reasons -->
         <section>
-          <p>${_('An email has been sent to {email}. Follow the link in the email to change your password.').format(email=user.email)}</p>
+          <p>${u"Un courriel a été envoyé à {email}. Suivez le lien dans le courriel pour changer votre mot de passe.".format(email=user.email)}</p>
         </section>
       </form>
     </div>
@@ -412,7 +412,7 @@
 
     <header>
       <h2>
-        <span id="change_email_title">${_("Change Email")}</span>
+        <span id="change_email_title">${u"Changer l'adresse courriel"}</span>
         <span class="sr">,
           ## Translators: this text gives status on if the modal interface (a menu or piece of UI that takes the full focus of the screen) is open or not
           ${_("window open")}
@@ -425,16 +425,16 @@
         <div id="change_email_error" class="modal-form-error"> </div>
         <fieldset>
           <div class="input-group">
-            <label>${_('Please enter your new email address:')}</label>
+            <label>${u"Saisir votre nouvelle adresse courriel :"}</label>
             <input id="new_email_field" type="email" value="" />
             <label>${_('Please confirm your password:')}</label>
             <input id="new_email_password" value="" type="password" />
           </div>
           <section>
-            <p>${_('We will send a confirmation to both {email} and your new email as part of the process.').format(email=user.email)}</p>
+            <p>${u"Nous enverrons une confirmation à la fois à {email} et à votre nouvelle adresse courriel.".format(email=user.email)}</p>
           </section>
           <div class="submit">
-            <input type="submit" id="submit_email_change" value="${_('Change Email')}"/>
+            <input type="submit" id="submit_email_change" value="${u"Changer l'adresse courriel"}"/>
           </div>
         </fieldset>
       </form>
