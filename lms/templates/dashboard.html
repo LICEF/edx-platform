@@ -412,7 +412,7 @@
 
     <header>
       <h2>
-        <span id="change_email_title">${_("Change Email")}</span>
+        <span id="change_email_title">${_"Changer l'adresse courriel"}</span>
         <span class="sr">,
           ## Translators: this text gives status on if the modal interface (a menu or piece of UI that takes the full focus of the screen) is open or not
           ${_("window open")}
@@ -425,16 +425,16 @@
         <div id="change_email_error" class="modal-form-error"> </div>
         <fieldset>
           <div class="input-group">
-            <label>${_('Please enter your new email address:')}</label>
+            <label>${u"Saisir votre nouvelle adresse courriel :"}</label>
             <input id="new_email_field" type="email" value="" />
             <label>${_('Please confirm your password:')}</label>
             <input id="new_email_password" value="" type="password" />
           </div>
           <section>
-            <p>${_('We will send a confirmation to both {email} and your new email as part of the process.').format(email=user.email)}</p>
+            <p>${u"Nous enverrons une confirmation à la fois à {email} et à votre nouvelle adresse courriel.').format(email=user.email)}</p>
           </section>
           <div class="submit">
-            <input type="submit" id="submit_email_change" value="${_('Change Email')}"/>
+            <input type="submit" id="submit_email_change" value="${_"Changer l'adresse courriel"}"/>
           </div>
         </fieldset>
       </form>
