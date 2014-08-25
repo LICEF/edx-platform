@@ -69,15 +69,15 @@
         % elif course.start_date_is_still_default: # Course start date TBD
         ${_("Course has not yet started")}
         % else:   # hasn't started yet
-        ${_("Course Starts - {start_date}").format(start_date=course.start_date_text)}
+        ${u"Début du cours - {start_date}".format(start_date=course.start_date_text)}
         % endif
         </p>
         <h2 class="university">${get_course_about_section(course, 'university')}</h2>
         <h3>
           % if show_courseware_link:
-            <a href="${course_target}">${course.display_number_with_default | h} ${course.display_name_with_default}</a>
+            <a href="${course_target}">${course.display_name_with_default}</a>
           % else:
-            <span>${course.display_number_with_default | h} ${course.display_name_with_default}</span>
+            <span>${course.display_name_with_default}</span>
           % endif
         </h3>
       </hgroup>
