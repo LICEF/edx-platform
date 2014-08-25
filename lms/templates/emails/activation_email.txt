@@ -22,4 +22,4 @@ u"fureteur l'adresse qui suit:".format(platform_name=settings.PLATFORM_NAME)}
         u"Si vous avez besoin d'aide, consultez la rubrique FAQ de {platform_name}.".format(platform_name=settings.PLATFORM_NAME)}
 % endif
 
-${u"L'équipe Ulibre."}
+${u"L'équipe Ulibre"}
