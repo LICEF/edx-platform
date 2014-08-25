@@ -109,7 +109,7 @@
                {"new_email" : new_email, "password" : new_password},
                function(data) {
                  if (data.success) {
-                   $("#change_email_title").html("${_('Please verify your new email')}");
+                   $("#change_email_title").html("${u"Veillez vérifier votre nouvelle adsresse de courriel"}");
                    $("#change_email_form").html("<p>${_('You\'ll receive a confirmation in your inbox.'
                                                     ' Please click the link in the email to confirm'
                                                     ' the email change.')}</p>");
@@ -431,10 +431,10 @@
             <input id="new_email_password" value="" type="password" />
           </div>
           <section>
-            <p>${u"Nous enverrons une confirmation à la fois à {email} et à votre nouvelle adresse courriel.').format(email=user.email)}</p>
+            <p>${u"Nous enverrons une confirmation à la fois à {email} et à votre nouvelle adresse courriel.".format(email=user.email)}</p>
           </section>
           <div class="submit">
-            <input type="submit" id="submit_email_change" value="${_"Changer l'adresse courriel"}"/>
+            <input type="submit" id="submit_email_change" value="${u"Changer l'adresse courriel"}"/>
           </div>
         </fieldset>
       </form>
