@@ -1,0 +1,27 @@
+#!/bin/sh
+# Script Bash pour la sauvegarde des BD d'une instance de Open edX
+echo "Sauvegarde des bases de données - Open edX"
+export BACKUP_HOME=/var/backups
+BCKP_SQL=$BACKUP_HOME/sql_bckp_$(date +%Y-%m-%d_%Hh%M).sql
+echo "Nom de la sauvegarde SQL: "$BCKP_SQL
+echo "Début de la sauvegarde locale MySQL"
+# mysqldump -u root -p --all-databases > BCKP_SQL
+mysqldump --all-databases > BCKP_SQL
+echo "Fin de la sauvegarde locale MySQL"
+echo "Compression de la sauvegarde locale MySQL"
+echo "Nom de la sauvegarde SQL compressée: "$BCKP_SQL.tar
+tar -cPf $BCKP_SQL.tar $BCKP_SQL
+# echo "Effacer la sauvegarde SQL non compressée"
+# rm -r $BCKP_SQL
+echo "Transfert de la sauvegarde locale MySQL sur un serveur externe"
+BCKP_MONGO=$BACKUP_HOME/mongo_bckp_$(date +%Y-%m-%d_%Hh%M)
+echo "Nom de la sauvegarde MONGO: "$BCKP_MONGO
+echo "Début de la sauvegarde locale MongoDB"
+mongodump -o $BCKP_MONGO
+echo "Fin de la sauvegarde locale MongoDB"
+echo "Compression de la sauvegarde locale MongoDB"
+echo "Nom de la sauvegarde MONGO compressée: "$BCKP_MONGO.tar
+tar -cvf $BCKP_MONGO.tar $BCKP_MONGO/
+echo "Effacer la sauvegarde MONGO non compressée"
+rm -r $BCKP_MONGO
+echo "Transfert de la sauvegarde locale MongoDB sur un serveur externe"
