@@ -9,19 +9,26 @@ echo "Début de la sauvegarde locale MySQL"
 mysqldump --all-databases > BCKP_SQL
 echo "Fin de la sauvegarde locale MySQL"
 echo "Compression de la sauvegarde locale MySQL"
-echo "Nom de la sauvegarde SQL compressée: "$BCKP_SQL.tar
+echo "Nom de la sauvegarde MySQL compressée: "$BCKP_SQL.tar
 tar -cPf $BCKP_SQL.tar $BCKP_SQL
 # echo "Effacer la sauvegarde SQL non compressée"
 # rm -r $BCKP_SQL
 echo "Transfert de la sauvegarde locale MySQL sur un serveur externe"
+# export CERT=/chemin à déterminer
+# export BCKP_SERVER=URL à déterminer
+# scp -i $CERT $BCKP_SQL.tar ubuntu@$BCKP_SERVER:$BACKUP_HOME
+echo "Sauvegarde MySQL compressée transférée sur un serveur externe"
 BCKP_MONGO=$BACKUP_HOME/mongo_bckp_$(date +%Y-%m-%d_%Hh%M)
 echo "Nom de la sauvegarde MONGO: "$BCKP_MONGO
-echo "Début de la sauvegarde locale MongoDB"
+echo "Début de la sauvegarde locale MONGO"
 mongodump -o $BCKP_MONGO
-echo "Fin de la sauvegarde locale MongoDB"
-echo "Compression de la sauvegarde locale MongoDB"
+echo "Fin de la sauvegarde locale MONGO"
+echo "Compression de la sauvegarde locale MONGO"
 echo "Nom de la sauvegarde MONGO compressée: "$BCKP_MONGO.tar
 tar -cvf $BCKP_MONGO.tar $BCKP_MONGO/
 echo "Effacer la sauvegarde MONGO non compressée"
 rm -r $BCKP_MONGO
-echo "Transfert de la sauvegarde locale MongoDB sur un serveur externe"
+echo "Transfert de la sauvegarde compressée MONGO sur un serveur externe"
+# scp -i $CERT $BCKP_MONGO.tar ubuntu@$BCKP_SERVER:$BACKUP_HOME
+echo "Sauvegarde MONGO compressée transférée sur un serveur externe"
+
