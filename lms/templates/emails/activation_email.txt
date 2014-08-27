@@ -4,8 +4,8 @@
 <%! from django.utils.translation import ugettext as _ %>
 
 ${u"Merci de vous inscrire à {platform_name}! Pour activer "
-u"votre compte, copiez et collez dans la barre d'adresse de votre "
-u"fureteur l'adresse qui suit:".format(platform_name=settings.PLATFORM_NAME)}
+	u"votre compte, copiez et collez dans la barre d'adresse de votre "
+	u"fureteur l'adresse qui suit:".format(platform_name=settings.PLATFORM_NAME)}
 
 % if is_secure:
   https://${ site }/activate/${ key }
