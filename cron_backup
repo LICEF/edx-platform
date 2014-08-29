@@ -1,0 +1,12 @@
+# Cette tâche crontab fait la sauvegarde des BD de edX à 3h et 15h tous les jours
+# placer dans le répertoire /etc/cron.d/
+# > nano /etc/cron.d/cron_backup
+# > service cron restart (peut-être pas nécessaire)
+# > cat  /var/log/syslog
+#
+#
+0 3,15 * * * root /edx/app/edxapp/edx-platform/bckpDbEdX | root /usr/bin/logger "sauvegarde $(date)"
+#
+# Test cron
+# */1 * * * * root /usr/bin/logger "cron"
+
