@@ -69,7 +69,7 @@
         % elif course.start_date_is_still_default: # Course start date TBD
         ${_("Course has not yet started")}
         % else:   # hasn't started yet
-        ${u"Début du cours - {start_date}".format(start_date=course.start_date_text)}
+        ${u"Date prévue de début du cours - {start_date}".format(start_date=course.start_date_text)}
         % endif
         </p>
         <h2 class="university">${get_course_about_section(course, 'university')}</h2>
