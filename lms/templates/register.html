@@ -355,7 +355,10 @@
             % if settings.REGISTRATION_EXTRA_FIELDS['email_consent'] != 'hidden':
             <div class="field ${settings.REGISTRATION_EXTRA_FIELDS['email_consent']} checkbox" id="field-email_consent">
               <input id="emailconsent-yes" type="checkbox" name="email_consent" value="true" />
+<!--
               <label for="emailconsent-yes">${"OUI — J’accepte de recevoir, à l'occasion, des courriels de la TÉLUQ"}</label>
+-->
+              <label for="emailconsent-yes">${"OUI - J’accepte de recevoir des communications de la part de la TÉLUQ (information, promotion, infolettre)."}</label>
             </div>
             % endif
 
