@@ -293,7 +293,7 @@
         <ol class="important-dates">
           ## <li><div class="icon course-number"></div><p>${_("Course Number")}</p><span class="course-number">${course.display_number_with_default | h}</span></li>
           % if not course.start_date_is_still_default:
-          <li><div class="icon start"></div><p>${u"Début du cours"}</p><span class="start-date">${"octobre 2014"}</span></li>
+          <li><div class="icon start"></div><p>${u"Début du cours"}</p><span class="start-date">${"20 octobre 2014"}</span></li>
           % endif
             ## We plan to ditch end_date (which is not stored in course metadata),
             ## but for backwards compatibility, show about/end_date blob if it exists.
@@ -306,10 +306,20 @@
               ##  % else:
              ##       ${course.end_date_text}
              ##   % endif
-             ${"novembre 2014"}
+             ${u"12 décembre 2014"}
                 </span>
             </li>
             % endif
+            
+            ## Added like requested
+            <li>
+                <div class="icon end"></div>
+                <p>${u"Date limite d’inscription"}</p>
+                <span class="final-date"> 
+                  ## ${u"17 novembre 2014"}
+                  ${course.enrollment_end.strftime('%d %b %Y')}
+                </span>
+            </li>
 
           % if get_course_about_section(course, "effort"):
             <li><div class="icon effort"></div><p>${_("Estimated Effort")}</p><span class="start-date">${get_course_about_section(course, "effort")}</span></li>
