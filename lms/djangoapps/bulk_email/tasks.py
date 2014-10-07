@@ -387,6 +387,8 @@ def _get_source_address(course_id, course_title):
         re.sub(r"[^\w.-]", '_', course_id.course),
         settings.BULK_EMAIL_DEFAULT_FROM_EMAIL
     )
+    log.info("_get_source_address %s ", from_addr)
+
     return from_addr
 
 

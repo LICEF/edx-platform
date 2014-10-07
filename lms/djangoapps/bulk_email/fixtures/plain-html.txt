@@ -384,7 +384,7 @@
 																						style='padding-top: 9px; padding-right: 18px; padding-bottom: 9px; padding-left: 18px; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #000000; font-family: Helvetica; font-size: 11px; line-height: 125%; text-align: left;'>
 																						<em>Copyright © 2014 Ulibre, Tous droits réservés.</em><br>
 																					<br>
-																					<br>Ce courriel vous a été envoyé automatiquement par {platform_name}. 
+																					<br>Ce courriel vous a été envoyé automatiquement par {platform_name}. Ne pas répondre à ce courriel.
 																					<br>Vous recevez ce courriel à l'adresse {email} car vous êtes inscrit au cours 
 																					<a href='{course_url}'>{course_title}</a>.
 																					Pour vous désabonner de la liste d’envoi, cliquez 
