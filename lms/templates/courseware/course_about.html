@@ -316,8 +316,9 @@
                 <div class="icon end"></div>
                 <p>${u"Date limite d’inscription"}</p>
                 <span class="final-date"> 
-                  ## ${u"17 novembre 2014"}
-                  ${course.enrollment_end.strftime('%d %b %Y')}
+                  ## temporary patch until developping some formatting function (novembre instead of nov...)
+                  ${u"17 novembre 2014"}
+                  ## ${course.enrollment_end.strftime('%d %b %Y')}
                 </span>
             </li>
 
