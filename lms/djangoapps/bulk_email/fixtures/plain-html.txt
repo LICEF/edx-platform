@@ -16,7 +16,8 @@
 			<tr>
 				<td align='center' valign='top' id='bodyCell'
 					style='border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0; padding: 0; border-top: 0; height: 100% !important; width: 100% !important;'>
-					<!-- BEGIN TEMPLATE // -->
+					<!-- BEGIN TEMPLATE
+//  -->
 					<table border='0' cellpadding='0' cellspacing='0' width='100%'
 						style='border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;'>
 						<tr>
@@ -104,9 +105,9 @@
 																							target='_self'
 																							style='word-wrap: break-word !important;'>
 																							<img align='left' alt='Ulibre'
-																								src='http://ulibre.ca/static/themes/teluq/images/ulibre_logo.a22de305c783.jpg'
-																								width='278'
-																								style='max-width: 400px; padding-bottom: 0; display: inline !important; vertical-align: bottom; border: 0; line-height: 100%; outline: none; text-decoration: none; height: auto !important;'
+																								src='http://ulibre.ca/c4x/TELUQ/TUL1/asset/BandeauInfolettre.png'
+																								width='600'
+																								style='max-width: 600px; padding-bottom: 0; display: inline !important; vertical-align: bottom; border: 0; line-height: 100%; outline: none; text-decoration: none; height: auto !important;'
 																								class='mcnImage'>
 																						</a>
 																					</td>
@@ -382,14 +383,10 @@
 																				<tr>
 																					<td valign='top' class='mcnTextContent'
 																						style='padding-top: 9px; padding-right: 18px; padding-bottom: 9px; padding-left: 18px; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #000000; font-family: Helvetica; font-size: 11px; line-height: 125%; text-align: left;'>
-																						<em>Copyright © 2014 Ulibre, Tous droits réservés.</em><br>
+																						<em>Copyright © 2014 TÉLUQ, Tous droits réservés.</em><br>
+																					<br>Ce courriel vous a été envoyé automatiquement par {platform_name}. Pour vous désabonner de la liste d’envoi, cliquez
+																					<a href='{account_settings_url}'> ici</a>.
 																					<br>
-																					<br>Ce courriel vous a été envoyé automatiquement par {platform_name}. Ne pas répondre à ce courriel.
-																					<br>Vous recevez ce courriel à l'adresse {email} car vous êtes inscrit au cours 
-																					<a href='{course_url}'>{course_title}</a>.
-																					Pour vous désabonner de la liste d’envoi, cliquez 
-																					<a href='{account_settings_url}'>ici</a>.
-																						<br>
 																					</td>
 																				</tr>
 																			</tbody>
