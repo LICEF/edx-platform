@@ -5,15 +5,10 @@
 ## TODO: this probably needs better formatting to look nice in an
 ##       email client (Mako leaves awkward whitespace)
 % if stanford_theme_enabled():
-  ${u"Ceci est pour confirmer que nous avons changé l'adresse de courriel associée à "
-      u"{platform_name} de {old_email} à {new_email}. Si vous n'êtes pas à l'origine "
-      u"de cette demande de changement, veuillez nous contacter à".format(platform_name=settings.PLATFORM_NAME, old_email=old_email, new_email=new_email)}
+  ${u"Ceci est pour confirmer que nous avons changé l'adresse de courriel associée à {platform_name} de {old_email} à {new_email}. Si vous n'êtes pas à l'origine de cette demande de changement, veuillez nous contacter à".format(platform_name=settings.PLATFORM_NAME, old_email=old_email, new_email=new_email)}
   ${settings.CONTACT_EMAIL}
 % else:
-  ${u"Ceci est pour confirmer que nous avons changé l'adresse de courriel associée à "
-      u"{platform_name} de {old_email} à {new_email}. Si vous n'êtes pas à l'origine "
-      u"de cette demande de changement, veuillez nous contacter immédiatement. Vous trouverez l'information "
-      u" pour nous contacter à :".format(platform_name=settings.PLATFORM_NAME, old_email=old_email, new_email=new_email)}
+  ${u"Ceci est pour confirmer que nous avons changé l'adresse de courriel associée à {platform_name} de {old_email} à {new_email}. Si vous n'êtes pas à l'origine de cette demande de changement, veuillez nous contacter immédiatement. Vous trouverez l'information pour nous contacter à :".format(platform_name=settings.PLATFORM_NAME, old_email=old_email, new_email=new_email)}
 
   % if is_secure:
     https://${ site }${reverse('contact')}
