@@ -840,7 +840,7 @@ def login_user(request, error=""):  # pylint: disable-msg=too-many-statements,un
                 AUDIT_LOG.warning(u"Login failed - password for {0} is invalid".format(email))
         return JsonResponse({
             "success": False,
-            "value": _('Email or password is incorrect.'),
+            "value": _('Votre courriel ou mot de passe est incorrect'),
         })  # TODO: this should be status code 400  # pylint: disable=fixme
 
     # successful login, clear failed login attempts counters, if applicable
