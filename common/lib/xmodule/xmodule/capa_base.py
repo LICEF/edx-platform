@@ -1,3 +1,6 @@
+
+# * coding: utf-8
+
 """Implements basics of Capa, including class CapaModule."""
 import cgi
 import copy
@@ -1344,7 +1347,7 @@ class CapaMixin(CapaFields):
         self.track_function_unmask('save_problem_success', event_info)
         msg = _("Your answers have been saved.")
         if not self.max_attempts == 0:
-            msg = _("Your answers have been saved but not graded. Click 'Check' to grade them.")
+            msg = u"Vos réponses ont été enregistrées mais pas encore évaluées. Cliquez sur 'Valider' pour les évaluer."
         return {
             'success': True,
             'msg': msg,
