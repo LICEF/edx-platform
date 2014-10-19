@@ -15,11 +15,17 @@ def i_created_discussion_tag(step):
 
 @step('I see three alphabetized settings and their expected values$')
 def i_see_only_the_settings_and_values(step):
+    # world.verify_all_setting_entries(
+    #     [
+    #         ['Category', "Week 1", False],
+    #         ['Display Name', "Discussion", False],
+    #         ['Subcategory', "Topic-Level Student-Visible Label", False]
+    #     ])
     world.verify_all_setting_entries(
         [
-            ['Category', "Week 1", False],
+            ['Category', "Semaine 1", False],
             ['Display Name', "Discussion", False],
-            ['Subcategory', "Topic-Level Student-Visible Label", False]
+            ['Subcategory', "Étiquette de sujet visible par les participants", False]
         ])
 
 

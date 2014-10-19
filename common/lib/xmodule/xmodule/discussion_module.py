@@ -1,3 +1,4 @@
+# -*- coding: utf-8
 from pkg_resources import resource_string
 
 from xmodule.x_module import XModule
@@ -25,14 +26,18 @@ class DiscussionFields(object):
     )
     discussion_category = String(
         display_name=_("Category"),
-        default="Week 1",
-        help=_("A category name for the discussion. This name appears in the left pane of the discussion forum for the course."),
+ #       default="Week 1",
+ #       help=_("A category name for the discussion. This name appears in the left pane of the discussion forum for the course."),
+        default= u"Semaine 1",
+        help= u"Une catégorie pour la discussion. Ce nom s'affiche dans la liste de discussions à gauche de l'outil de forum.",
         scope=Scope.settings
     )
     discussion_target = String(
         display_name=_("Subcategory"),
-        default="Topic-Level Student-Visible Label",
-        help=_("A subcategory name for the discussion. This name appears in the left pane of the discussion forum for the course."),
+#        default="Topic-Level Student-Visible Label",
+#        help=_("A subcategory name for the discussion. This name appears in the left pane of the discussion forum for the course."),
+        default= u"Étiquette de sujet visible par les participants",
+        help= u"Une sous-catégorie pour la discussion. Ce nom s'affiche dans la liste de discussions à gauche de l'outil de forum.",
         scope=Scope.settings
     )
     sort_key = String(scope=Scope.settings)

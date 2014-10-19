@@ -1,3 +1,5 @@
+# -*- coding: utf-8
+
 <%! from django.utils.translation import ugettext as _ %>
 <script type="text/template" id="thread-list-template">
     <div class="forum-nav-header">
@@ -34,11 +36,17 @@
             <span class="forum-nav-sort">
                 <select class="forum-nav-sort-control">
                     ## Translators: This is a menu option for sorting forum threads
-                    <option value="date">${_("by recent activity")}</option>
+                    // <option value="date">${_("by recent activity")}</option>
+                    // ## Translators: This is a menu option for sorting forum threads
+                    // <option value="comments">${_("by most activity")}</option>
+                    // ## Translators: This is a menu option for sorting forum threads
+                    // <option value="votes">${_("by most votes")}</option>
                     ## Translators: This is a menu option for sorting forum threads
-                    <option value="comments">${_("by most activity")}</option>
+                    <option value="date">${u"selon les billets les plus récentes"}</option>
                     ## Translators: This is a menu option for sorting forum threads
-                    <option value="votes">${_("by most votes")}</option>
+                    <option value="comments">${u"selon le plus grand nombre de billets"}</option>
+                    ## Translators: This is a menu option for sorting forum threads
+                    <option value="votes">${u"selon le plus grand nombre de votes"}</option>
                 </select>
             </span>
         </div>
