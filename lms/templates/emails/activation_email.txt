@@ -5,11 +5,11 @@
 
 ${u"Merci de vous inscrire à {platform_name}! Pour activer votre compte, copiez et collez dans la barre d'adresse de votre fureteur l'adresse qui suit:".format(platform_name=settings.PLATFORM_NAME)}
 
-% if is_secure:
+## % if is_secure:
   https://${ site }/activate/${ key }
-% else:
-  http://${ site }/activate/${ key }
-% endif
+## % else:
+##  https://${ site }/activate/${ key }
+##% endif
 
 ## Temporary hack until we develop a better way to adjust language
 % if stanford_theme_enabled():

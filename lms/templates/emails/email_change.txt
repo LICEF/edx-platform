@@ -5,11 +5,11 @@ u"{platform_name} de {old_email} à {new_email}. "
 u"Si cela est correct, confirmer votre demande de changement de courriel en "
 u"visitant:".format(platform_name=settings.PLATFORM_NAME, old_email=old_email, new_email=new_email)}
 
-% if is_secure:
+## % if is_secure:
  https://${ site }/email_confirm/${ key }
-% else:
- http://${ site }/email_confirm/${ key }
-% endif
+## % else:
+## http://${ site }/email_confirm/${ key }
+## % endif
 
 ## TODO: fix this ugly hack
 % if stanford_theme_enabled():

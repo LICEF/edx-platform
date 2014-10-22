@@ -10,11 +10,11 @@
 % else:
   ${u"Ceci est pour confirmer que nous avons changé l'adresse de courriel associée à {platform_name} de {old_email} à {new_email}. Si vous n'êtes pas à l'origine de cette demande de changement, veuillez nous contacter immédiatement. Vous trouverez l'information pour nous contacter à :".format(platform_name=settings.PLATFORM_NAME, old_email=old_email, new_email=new_email)}
 
-  % if is_secure:
+##  % if is_secure:
     https://${ site }${reverse('contact')}
-  % else:
-    http://${ site }${reverse('contact')}
-  % endif
+##  % else:
+##    http://${ site }${reverse('contact')}
+##  % endif
 % endif
 
 ${u"Nous conservons une trace de tous les vieux courriels, au besoin nous pourrons donc mener une enquête."}
