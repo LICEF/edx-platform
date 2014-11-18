@@ -1,3 +1,4 @@
+## -*- coding: utf-8 -*-
 <%! from django.utils.translation import ugettext as _ %>
 <%!
   from django.core.urlresolvers import reverse
@@ -176,7 +177,7 @@
         ## because AnonymousUsers cause can_enroll for shib courses to be False, but we need them to be able to click
         ## so that they can register and become a real user that can enroll.
         % elif not is_shib_course and not can_enroll:
-          <span class="register disabled">${_("Enrollment is Closed")}</span>
+          <span class="register disabled">${_(u"La période d'inscription est terminée.)}</span>
         %else:
           <a href="#" class="register">
             ${_("Register for")} ${_(u"ce cours")}
