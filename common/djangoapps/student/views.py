@@ -613,7 +613,8 @@ def change_enrollment(request):
             return HttpResponseBadRequest(_("Course id is invalid"))
 
         if not has_access(user, 'enroll', course):
-            return HttpResponseBadRequest(_("Enrollment is closed"))
+            # return HttpResponseBadRequest(_("Enrollment is closed"))
+            return HttpResponseBadRequest(u"La période d'inscription est terminée.")
 
         # see if we have already filled up all allowed enrollments
         is_course_full = CourseEnrollment.is_course_full(course)

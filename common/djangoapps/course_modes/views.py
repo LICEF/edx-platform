@@ -1,3 +1,4 @@
+# * coding: utf-8
 """
 Views for the course_mode module
 """
@@ -82,7 +83,8 @@ class ChooseModeView(View):
         # but I don't really have the time to refactor it more nicely and test.
         course = modulestore().get_course(course_key)
         if not has_access(user, 'enroll', course):
-            error_msg = _("Enrollment is closed")
+            # error_msg = _("Enrollment is closed")
+            error_msg = u"La période d'inscription est terminée."
             return self.get(request, course_id, error=error_msg)
 
         upgrade = request.GET.get('upgrade', False)
