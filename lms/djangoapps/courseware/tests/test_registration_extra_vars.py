@@ -56,11 +56,13 @@ class TestExtraRegistrationVariables(TestCase):
         'gender': 'hidden',
         'year_of_birth': 'hidden',
         'mailing_address': 'hidden',
+        'pub_sources': 'hidden',
         'goals': 'hidden',
         'honor_code': 'hidden',
         'email_consent': 'hidden',
         'city': 'hidden',
         'country': 'hidden'})
+
     def test_all_hidden(self):
         """
         When the fields are all hidden, should pass without extra vars
@@ -200,6 +202,28 @@ class TestExtraRegistrationVariables(TestCase):
     @patch.dict(settings.REGISTRATION_EXTRA_FIELDS, {'mailing_address': 'required'})
     def test_required_mailing_address(self):
         self.url_params['mailing_address'] = 'my address'
+        response = self.client.post(self.url, self.url_params)
+        self.assertEqual(response.status_code, 200)
+        obj = json.loads(response.content)
+        self.assertTrue(obj['success'])
+
+    @patch.dict(settings.REGISTRATION_EXTRA_FIELDS, {'pub_sources': 'required'})
+    def test_required_pub_sources_missing(self):
+        """
+        Should require the pub_sources if configured as 'required' but missing
+        """
+        self.url_params['pub_sources'] = ''
+        response = self.client.post(self.url, self.url_params)
+        self.assertEqual(response.status_code, 400)
+        obj = json.loads(response.content)
+        self.assertEqual(
+            obj['value'],
+            u"La source d'information est requise.",
+        )
+
+    @patch.dict(settings.REGISTRATION_EXTRA_FIELDS, {'pub_sources': 'required'})
+    def test_required_pub_sources(self):
+        self.url_params['pub_sources'] = 'my pub sources'
         response = self.client.post(self.url, self.url_params)
         self.assertEqual(response.status_code, 200)
         obj = json.loads(response.content)

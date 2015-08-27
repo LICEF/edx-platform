@@ -312,6 +312,20 @@
           </li>
           % endif
 
+          % if settings.REGISTRATION_EXTRA_FIELDS['pub_sources'] != 'hidden':
+          <li class="field-group">
+          <div class="field ${settings.REGISTRATION_EXTRA_FIELDS['pub_sources']} select" id="field-pub-sources">
+              <label for="field-pub-sources">${u"Où vous avez entendu parler de {platform_name}?"}</label>
+              <select id="field-pub-sources" name="pub_sources" ${'required aria-required="true"' if settings.REGISTRATION_EXTRA_FIELDS['pub_sources'] == 'required' else ''}>
+                <option value="">--</option>
+                %for code, pub_sources in UserProfile.PUB_SOURCES_CHOICES:
+                <option value="${code}">${_(pub_sources)}</option>
+                %endfor
+              </select>
+            </div>
+          </li>
+          % endif
+
           % if settings.REGISTRATION_EXTRA_FIELDS['goals'] != 'hidden':
           <li class="field ${settings.REGISTRATION_EXTRA_FIELDS['goals']} text" id="field-goals">
              <label for="goals">${u"Merci de nous préciser comment vous avez entendu parler de {platform_name}? Site web, journal, média, réseau social, etc. Lequel?".format(platform_name=platform_name)}</label>

@@ -245,6 +245,20 @@ class UserProfile(models.Model):
     mailing_address = models.TextField(blank=True, null=True)
     city = models.TextField(blank=True, null=True)
     country = CountryField(blank=True, null=True)
+    PUB_SOURCES_CHOICES = (
+        ('gse', u"Moteur de recherche Google"),
+        ('ose', u"Autre moteur de recherche"),
+        ('t', u"Site web de la TÉLUQ"),
+        ('f', u"FaceBook"),
+        ('t', u"Twitter"),
+        ('g+', u"Google+"),
+        ('p', u"Référence personnelle"),
+        ('other', ugettext_noop("Other"))
+    )
+    pub_sources = models.CharField(
+        blank=True, null=True, max_length=6, db_index=True,
+        choices=PUB_SOURCES_CHOICES
+    )
     goals = models.TextField(blank=True, null=True)
     allow_certificate = models.BooleanField(default=1)
     email_consent = models.BooleanField(default=0)
