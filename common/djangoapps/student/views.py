@@ -1207,7 +1207,7 @@ def create_account(request, post_override=None):  # pylint: disable-msg=too-many
                 'gender': _('Your gender is required'),
                 'year_of_birth': _('Your year of birth is required'),
                 'mailing_address': _('Your mailing address is required'),
-                'pub_sources': _('Vous devez indiquer où vous avez entendu parler d’Ulibre.'),
+                'pub_sources': u"Vous devez indiquer où vous avez entendu parler d’Ulibre.",
                 'goals': u"Vous devez indiquer comment vous avez entendu parler d’Ulibre.",
                 'city': u"Une ville est requise.",
                 'country': u"Un pays est requis.",
