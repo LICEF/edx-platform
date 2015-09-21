@@ -1190,7 +1190,7 @@ def create_account(request, post_override=None):  # pylint: disable-msg=too-many
         required_post_vars.append('terms_of_service')
 
     for field_name in required_post_vars:
-        if field_name in ('gender', 'level_of_education'):
+        if field_name in ('gender', 'level_of_education', 'pub_sources'):
             min_length = 1
         else:
             min_length = 2
